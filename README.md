@@ -44,7 +44,10 @@ Our best model achieved **79% validation accuracy** on the train dataset, and  *
 
 ### Data Visualization
 
+<img width="796" height="789" alt="Image" src="https://github.com/user-attachments/assets/70b65b26-a4ee-47a2-9bae-4c544cfe6023" />
 
+
+<img width="792" height="790" alt="Image" src="https://github.com/user-attachments/assets/4c75e706-3d26-4183-abfd-4a91499f984a" />
 
 ---
 
