@@ -57,3 +57,16 @@ Our best model achieved **79% validation accuracy** on the train dataset, and  *
 - **Output**: One of 7 emotion classes (softmax classification)
 
 ---
+
+### 🧱 Models
+
+Three transfer learning models were tested:
+- **MobileNetV2**  
+- **EfficientNetB0**
+- **ResNet50**   
+
+*  **Loss**: `SparseCategoricalCrossentropy`
+*  **Optimizer**: Adam
+* **Callbacks**: EarlyStopping, ReduceLROnPlateau
+
+
