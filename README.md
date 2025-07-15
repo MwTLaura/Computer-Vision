@@ -69,4 +69,16 @@ Three transfer learning models were tested:
 *  **Optimizer**: Adam
 * **Callbacks**: EarlyStopping, ReduceLROnPlateau
 
+### Training
 
+- **Hardware**: Local MacBook using CPU 
+- **Software**: TensorFlow 2.16
+- **Batch Size**: 10
+- **Epochs**: 10 (laptop can only hadle 10 epochs)
+- **Stopping Criteria**: Val loss plateau
+
+Training Curves:
+
+- All models showed steadily improving accuracy over epochs.
+- **RestNet50** peaked at **~79% val accuracy**
+- **EfficientNetB0** and **MobileNetV2** reached **~77% validation accuracy**
