@@ -82,3 +82,9 @@ Training Curves:
 - All models showed steadily improving accuracy over epochs.
 - **RestNet50** peaked at **~79% val accuracy**
 - **EfficientNetB0** and **MobileNetV2** reached **~77% validation accuracy**
+
+---
+
+### Performance Comparison
+
+
