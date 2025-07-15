@@ -105,17 +105,17 @@ Training Curves:
 
 ## How to Reproduce Results
 
-- Set up environment: Download the dataset [Facial Expression Dataset](https://www.kaggle.com/datasets/msambare/fer2013); on the DataLoader.ipynb change the path to match the one on your computer.
+- Set up environment: Download the dataset [Facial Expression Dataset](https://www.kaggle.com/datasets/msambare/fer2013); on the CV_DataLoad-2.ipynb change the path to match the one on your computer.
 - Install tensorflow, keras
 - Run the notebooks in order:
 
 | Notebook                                          | Description                                               |
 | ------------------------------------------------- | --------------------------------------------------------- |
-| `DataLoader.ipynb`                                | Loads and visualizes data, splits into train/val datasets |
+| `CV_DataLoad-2.ipynb`                             | Loads and visualizes data, splits into train/val datasets |
 | `TrainBaseModel.ipynb`                            | Builds and trains baseline                                |
 | `TrainBaseModelAugmentation.ipynb`                | Adds augmentation and trains again                        |
 | `CompareAugmentation.ipynb`                       | Compares baseline vs augmented using ROC                  |
-| `Train-MobileNetV2_EfficientNetB0_ResNet50.ipynb` | Trains all three models from scratch                      |   
+| `TrainTransferModels.ipynb`                       | Trains all three models from scratch                      |   
 | `ModelsOnTestData.ipynb`                          | Tests all models on test dataset                          |
 
 ---
