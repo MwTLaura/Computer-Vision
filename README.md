@@ -87,4 +87,45 @@ Training Curves:
 
 ### Performance Comparison
 
+<img width="564" height="454" alt="Image" src="https://github.com/user-attachments/assets/e563f64b-6326-40be-b636-289197f6381c" />
+
+<img width="568" height="452" alt="Image" src="https://github.com/user-attachments/assets/048040e2-f685-480a-adda-ab630f84d2b2" />
+
+<img width="567" height="458" alt="Image" src="https://github.com/user-attachments/assets/9831fbdb-db3a-422c-bfa6-d568c38dc4d1" />
+
+---
+
+### Conclusions
+
+- **RestNet50** outperformed other models both in validation and test settings.
+- Avoiding augmentation didn’t hinder performance due to good-quality, balanced data.
+- BatchNorm and learning rate scheduling improved stability.
+
+---
+
+## How to Reproduce Results
+
+- Set up environment: Download the dataset [Facial Expression Dataset](https://www.kaggle.com/datasets/msambare/fer2013); on the DataLoader.ipynb change the path to match the one on your computer.
+- Install tensorflow, keras
+- Run the notebooks in order:
+
+| Notebook                                          | Description                                               |
+| ------------------------------------------------- | --------------------------------------------------------- |
+| `DataLoader.ipynb`                                | Loads and visualizes data, splits into train/val datasets |
+| `TrainBaseModel.ipynb`                            | Builds and trains baseline                                |
+| `TrainBaseModelAugmentation.ipynb`                | Adds augmentation and trains again                        |
+| `CompareAugmentation.ipynb`                       | Compares baseline vs augmented using ROC                  |
+| `Train-MobileNetV2_EfficientNetB0_ResNet50.ipynb` | Trains all three models from scratch                      |   
+| `ModelsOnTestData.ipynb`                          | Tests all models on test dataset                          |
+
+---
+
+
+## Citations
+
+- FER2013 Dataset on Kaggle: [Facial Expression Dataset](https://www.kaggle.com/datasets/msambare/fer2013)
+
+- [TensorFlow Transfer Learning Docs](https://keras.io/api/applications/)
+
+
 
