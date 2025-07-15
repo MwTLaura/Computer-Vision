@@ -74,7 +74,7 @@ Three transfer learning models were tested:
 - **Hardware**: Local MacBook using CPU 
 - **Software**: TensorFlow 2.16
 - **Batch Size**: 10
-- **Epochs**: 10 (laptop can only hadle 10 epochs)
+- **Epochs**: 10 (laptop can only handle 10 epochs)
 - **Stopping Criteria**: Val loss plateau
 
 Training Curves:
