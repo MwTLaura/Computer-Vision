@@ -1,5 +1,7 @@
 # Computer-Vision
 
+![UTA-DataScience-Logo](https://github.com/user-attachments/assets/fec1b411-bda5-437a-9eb8-08a018eb84ae)
+
 # Facial Emotion Recognition using Transfer Learning
 
 This repository contains a deep learning project focused on classifying human facial expressions into seven emotion categories using transfer learning on image data from a public Kaggle dataset.
