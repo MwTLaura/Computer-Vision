@@ -107,8 +107,10 @@ Training Curves:
 
 ## How to Reproduce Results
 
-- Set up environment: Download the dataset [Facial Expression Dataset](https://www.kaggle.com/datasets/msambare/fer2013); on the CV_DataLoad-2.ipynb change the path to match the one on your computer.
-- Install tensorflow, keras
+- Copy this repository.
+- Set up the environment: Download the dataset [Facial Expression Dataset](https://www.kaggle.com/datasets/msambare/fer2013);
+- on the CV_DataLoad-2.ipynb change the path to match the one on your computer.
+- Install tensorflow and keras
 - Run the notebooks in order:
 
 | Notebook                                          | Description                                               |
