@@ -60,7 +60,7 @@ Our best model achieved **79% validation accuracy** on the train dataset, and  *
 
 ---
 
-### 🧱 Models
+### Models
 
 Three transfer learning models were tested:
 - **MobileNetV2**  
