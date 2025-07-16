@@ -87,7 +87,15 @@ Training Curves:
 
 ---
 
-### Performance Comparison
+### Baseline Models Comparison
+
+<img width="693" height="548" alt="Image" src="https://github.com/user-attachments/assets/e8adffd4-6590-44b4-bf8c-0dd74e30decc" />
+
+<img width="693" height="551" alt="Image" src="https://github.com/user-attachments/assets/fabf51c3-ab95-406d-8307-afa8950bbdef" />
+
+---
+
+### Models Performance Comparison
 
 <img width="564" height="454" alt="Image" src="https://github.com/user-attachments/assets/e563f64b-6326-40be-b636-289197f6381c" />
 
@@ -102,6 +110,15 @@ Training Curves:
 - **RestNet50** outperformed other models both in validation and test settings.
 - Avoiding augmentation didn’t hinder performance due to good-quality, balanced data.
 - BatchNorm and learning rate scheduling improved stability.
+
+---
+
+### Future Work
+
+- Fine-tuning top layers of pretrained models
+- Using more Epochs if CPU and GPU can handle 
+- Deploying the best model via Streamlit or Flask
+- Expanding dataset size or use FER+ or AffectNet for better generalization
 
 ---
 
