@@ -46,8 +46,18 @@ Our best model achieved **79% validation accuracy** on the train dataset, and  *
 
 ### Visualization & Augmentation 
 
+This grid shows sample images from the dataset categorized by emotion labels: sad, happy, neutral, fear, and angry. Each image appears in grayscale, which is typical in emotion classification datasets like FER2013. The facial expressions vary significantly across gender, age, and ethnicity, which means the dataset is relatively diverse.
+These images represent the base data used to train the emotion classification model.
+
 <img width="796" height="789" alt="Image" src="https://github.com/user-attachments/assets/70b65b26-a4ee-47a2-9bae-4c544cfe6023" />
 
+These are the same images after applying data augmentation techniques:
+	•	Horizontal flips
+	•	Brightness adjustments
+	•	Zoom or shift
+	•	Noise addition
+	•	Augmentation artificially expands the dataset, introducing variations that help prevent overfitting.
+	•	The augmented images preserve the core emotional expression while slightly altering presentation. This ensures the model generalizes better to real-world, unseen faces.
 
 <img width="792" height="790" alt="Image" src="https://github.com/user-attachments/assets/4c75e706-3d26-4183-abfd-4a91499f984a" />
 
@@ -89,7 +99,28 @@ Training Curves:
 
 ### Baseline Models Comparison
 
+This section presents two ROC curve plots for the multi-class classification model, one without augmentation (top) and one with augmentation (bottom).
+
+**ROC Curve – Baseline Model**
+	•	Shows strong performance across most classes:
+	•	Best AUC: Surprise (0.92)
+	•	Lowest AUC: Fear (0.79)
+	•	Other classes (angry, disgust, happy, sad, neutral) are tightly clustered around 0.84–0.87, indicating high discriminative power.
+
+Without augmentation, the model is performing quite well. It may be overfitting slightly, but the clean separation suggests it’s learning strong emotion-specific features.
+
 <img width="693" height="548" alt="Image" src="https://github.com/user-attachments/assets/e8adffd4-6590-44b4-bf8c-0dd74e30decc" />
+
+**ROC Curve – With Augmentation**
+AUCs drop significantly:
+	•	Surprise is still best (0.69), but others fall to ~0.54–0.63
+	•	Biggest drops are seen in:
+	•	Fear (0.54), Disgust (0.59), Sad (0.57)
+
+ Surprisingly, augmentation hurts performance here. This may suggest:
+	•	Over-aggressive or poorly tuned augmentation
+	•	Augmented images becoming too distorted, losing critical emotional features
+	•	Model failing to adapt to augmented domain shift
 
 <img width="693" height="551" alt="Image" src="https://github.com/user-attachments/assets/fabf51c3-ab95-406d-8307-afa8950bbdef" />
 
@@ -97,9 +128,34 @@ Training Curves:
 
 ### Models Performance Comparison
 
+This shows accuracy curves (training vs. validation) for the three models over 10 epochs after optimization was perfomed:
+	1.	MobileNetV2
+	2.	EfficientNetB0
+	3.	ResNet50
+
+ **MobileNetV2**
+	•	Validation accuracy peaks around 0.77
+	•	Train accuracy rises smoothly and eventually converges
+	•	Slight gap suggests minimal overfitting
+
+Conclusion: Lightweight model, solid performance, relatively stable generalization.
+
 <img width="564" height="454" alt="Image" src="https://github.com/user-attachments/assets/e563f64b-6326-40be-b636-289197f6381c" />
 
+**EfficientNetB0**
+	•	Validation accuracy hits around 0.77, around the same as MobileNet
+	•	Train accuracy lags a bit, indicating slower convergence
+
+Conclusion: EfficientNetB0 trains slower than the other models. May need more epochs or tuning.
+
 <img width="568" height="452" alt="Image" src="https://github.com/user-attachments/assets/048040e2-f685-480a-adda-ab630f84d2b2" />
+
+**ResNet50**
+	•	Validation accuracy nearly 0.79, it's the highest among the three
+	•	Train accuracy goes even higher (0.85+), with a small overfitting gap
+
+Conclusion: Best performer overall. Deep residual connections likely help the model learn complex features like subtle facial expressions.
+
 
 <img width="567" height="458" alt="Image" src="https://github.com/user-attachments/assets/9831fbdb-db3a-422c-bfa6-d568c38dc4d1" />
 
